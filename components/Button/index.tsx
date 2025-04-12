@@ -5,8 +5,9 @@ import {
 	Button as ButtonBase,
 } from "./button";
 
-interface ButtonProps extends PropsWithChildren<BaseButtonProps> {
+export interface ButtonProps extends PropsWithChildren<BaseButtonProps> {
 	tooltip?: string;
+	children?: React.ReactNode | null;
 }
 
 export const Button = ({ tooltip, children, ...props }: ButtonProps) => {
