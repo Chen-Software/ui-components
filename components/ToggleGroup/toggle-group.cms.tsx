@@ -31,15 +31,15 @@ export const ToggleGroup = ({
 	...props
 }: ToggleGroupProps) => {
 	const content = children?.map((item: ToggleGroupItemProps, i) => {
-		const { __typename } = item?.children?.[0] || { _template: "" };
+		const { __typename = "" } = item?.children?.[0] || { _template: "" };
 
 		const children =
 			[
 				"PageBodyToggleGroupChildrenToggleGroupItemChildrenText",
 				"PageBodyStackChildrenToggleGroupChildrenToggleGroupItemChildrenText",
-			].includes(__typename || "") &&
+			].includes(__typename) &&
 			h(Text, {
-				__typename,
+				__typename: __typename,
 				key: `${key}-TglGrp-${i}-${item?.value}-text`,
 				content: item?.children?.[0]?.content || null,
 			});
