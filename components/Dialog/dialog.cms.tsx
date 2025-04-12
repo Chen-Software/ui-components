@@ -33,6 +33,7 @@ export const Dialog = ({
 	const { accessibility, ...advancedConfigurations } = advancedConfigs || {};
 
 	return h(DialogBase, {
+		// @ts-expect-error
 		confirmButton: confirmButton && h(Button, confirmButton),
 		cancelButton: cancelButton && h(Button, cancelButton),
 		closeButton: closeButton && h(Button, closeButton),
