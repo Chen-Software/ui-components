@@ -19,7 +19,7 @@ export type ToggleGroupItemProps = {
 };
 
 export type ToggleGroupProps = {
-	__typename: string;
+	__typename?: string | null;
 	key?: string;
 	children?: (ToggleGroupItemProps | null)[] | null;
 };
