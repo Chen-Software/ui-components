@@ -2,7 +2,11 @@
 	"name": "@chen/ui-components",
 	"version": "0.0.1",
 	"private": true,
-	"files": ["dist", "components", "styles.css"],
+	"files": [
+		"dist",
+		"components",
+		"styles.css"
+	],
 	"scripts": {
 		"build": "panda && tsc --project tsconfig.json",
 		"format": "npx @biomejs/biome format --write ./components"
@@ -18,7 +22,8 @@
 		"@types/react": "^19.1.1",
 		"next": "^14.2.25",
 		"react": "^18.3.1",
-		"tinacms": "^2.7.5"
+		"tinacms": "^2.7.5",
+		"typescript": "^5.8.3"
 	},
 	"exports": {
 		".": {

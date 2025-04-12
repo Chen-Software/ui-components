@@ -20,10 +20,10 @@ importers:
         version: 5.5.0(react-dom@19.1.0(react@18.3.1))(react@18.3.1)
       '@pandacss/dev':
         specifier: ^0.53.3
-        version: 0.53.3(typescript@5.6.2)
+        version: 0.53.3(typescript@5.8.3)
       '@park-ui/panda-preset':
         specifier: ^0.43.1
-        version: 0.43.1(@internationalized/date@3.7.0)(@pandacss/dev@0.53.3(typescript@5.6.2))
+        version: 0.43.1(@internationalized/date@3.7.0)(@pandacss/dev@0.53.3(typescript@5.8.3))
       '@types/react':
         specifier: ^19.1.1
         version: 19.1.1
@@ -35,7 +35,10 @@ importers:
         version: 18.3.1
       tinacms:
         specifier: ^2.7.5
-        version: 2.7.5(@types/react@19.1.1)(abstract-level@1.0.4)(immer@10.1.1)(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(scheduler@0.26.0)(sucrase@3.35.0)(typescript@5.6.2)
+        version: 2.7.5(@types/react@19.1.1)(abstract-level@1.0.4)(immer@10.1.1)(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(scheduler@0.26.0)(sucrase@3.35.0)(typescript@5.8.3)
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
 
 packages:
 
@@ -4166,6 +4169,11 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  typescript@5.8.3:
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
 
@@ -4832,13 +4840,13 @@ snapshots:
       postcss-selector-parser: 6.1.2
       ts-pattern: 5.0.8
 
-  '@pandacss/dev@0.53.3(typescript@5.6.2)':
+  '@pandacss/dev@0.53.3(typescript@5.8.3)':
     dependencies:
       '@clack/prompts': 0.9.1
       '@pandacss/config': 0.53.3
       '@pandacss/logger': 0.53.3
-      '@pandacss/node': 0.53.3(typescript@5.6.2)
-      '@pandacss/postcss': 0.53.3(typescript@5.6.2)
+      '@pandacss/node': 0.53.3(typescript@5.8.3)
+      '@pandacss/postcss': 0.53.3(typescript@5.8.3)
       '@pandacss/preset-panda': 0.53.3
       '@pandacss/shared': 0.53.3
       '@pandacss/token-dictionary': 0.53.3
@@ -4848,10 +4856,10 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/extractor@0.53.3(typescript@5.6.2)':
+  '@pandacss/extractor@0.53.3(typescript@5.8.3)':
     dependencies:
       '@pandacss/shared': 0.53.3
-      ts-evaluator: 1.2.0(typescript@5.6.2)
+      ts-evaluator: 1.2.0(typescript@5.8.3)
       ts-morph: 24.0.0
     transitivePeerDependencies:
       - jsdom
@@ -4878,13 +4886,13 @@ snapshots:
       '@pandacss/types': 0.53.3
       kleur: 4.1.5
 
-  '@pandacss/node@0.53.3(typescript@5.6.2)':
+  '@pandacss/node@0.53.3(typescript@5.8.3)':
     dependencies:
       '@pandacss/config': 0.53.3
       '@pandacss/core': 0.53.3
       '@pandacss/generator': 0.53.3
       '@pandacss/logger': 0.53.3
-      '@pandacss/parser': 0.53.3(typescript@5.6.2)
+      '@pandacss/parser': 0.53.3(typescript@5.8.3)
       '@pandacss/reporter': 0.53.3
       '@pandacss/shared': 0.53.3
       '@pandacss/token-dictionary': 0.53.3
@@ -4907,16 +4915,16 @@ snapshots:
       tinyglobby: 0.2.12
       ts-morph: 24.0.0
       ts-pattern: 5.0.8
-      tsconfck: 3.0.2(typescript@5.6.2)
+      tsconfck: 3.0.2(typescript@5.8.3)
     transitivePeerDependencies:
       - jsdom
       - typescript
 
-  '@pandacss/parser@0.53.3(typescript@5.6.2)':
+  '@pandacss/parser@0.53.3(typescript@5.8.3)':
     dependencies:
       '@pandacss/config': 0.53.3
       '@pandacss/core': 0.53.3
-      '@pandacss/extractor': 0.53.3(typescript@5.6.2)
+      '@pandacss/extractor': 0.53.3(typescript@5.8.3)
       '@pandacss/logger': 0.53.3
       '@pandacss/shared': 0.53.3
       '@pandacss/types': 0.53.3
@@ -4928,9 +4936,9 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/postcss@0.53.3(typescript@5.6.2)':
+  '@pandacss/postcss@0.53.3(typescript@5.8.3)':
     dependencies:
-      '@pandacss/node': 0.53.3(typescript@5.6.2)
+      '@pandacss/node': 0.53.3(typescript@5.8.3)
       postcss: 8.4.49
     transitivePeerDependencies:
       - jsdom
@@ -4965,10 +4973,10 @@ snapshots:
 
   '@pandacss/types@0.53.3': {}
 
-  '@park-ui/panda-preset@0.43.1(@internationalized/date@3.7.0)(@pandacss/dev@0.53.3(typescript@5.6.2))':
+  '@park-ui/panda-preset@0.43.1(@internationalized/date@3.7.0)(@pandacss/dev@0.53.3(typescript@5.8.3))':
     dependencies:
       '@ark-ui/anatomy': 3.5.0(@internationalized/date@3.7.0)
-      '@pandacss/dev': 0.53.3(typescript@5.6.2)
+      '@pandacss/dev': 0.53.3(typescript@5.8.3)
       effect: 3.10.15
     transitivePeerDependencies:
       - '@internationalized/date'
@@ -5462,10 +5470,10 @@ snapshots:
 
   '@tanstack/virtual-core@3.13.6': {}
 
-  '@tinacms/graphql@1.5.16(react@18.3.1)(typescript@5.6.2)':
+  '@tinacms/graphql@1.5.16(react@18.3.1)(typescript@5.8.3)':
     dependencies:
       '@iarna/toml': 2.2.5
-      '@tinacms/mdx': 1.6.2(react@18.3.1)(typescript@5.6.2)(yup@0.32.11)
+      '@tinacms/mdx': 1.6.2(react@18.3.1)(typescript@5.8.3)(yup@0.32.11)
       '@tinacms/schema-tools': 1.7.3(react@18.3.1)(yup@0.32.11)
       abstract-level: 1.0.4
       date-fns: 2.30.0
@@ -5492,7 +5500,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@tinacms/mdx@1.6.2(react@18.3.1)(typescript@5.6.2)(yup@0.32.11)':
+  '@tinacms/mdx@1.6.2(react@18.3.1)(typescript@5.8.3)(yup@0.32.11)':
     dependencies:
       '@tinacms/schema-tools': 1.7.3(react@18.3.1)(yup@0.32.11)
       acorn: 8.8.2
@@ -5518,7 +5526,7 @@ snapshots:
       remark-gfm: 2.0.0
       remark-mdx: 2.3.0
       stringify-entities: 4.0.3
-      typedoc: 0.26.11(typescript@5.6.2)
+      typedoc: 0.26.11(typescript@5.8.3)
       unist-util-source: 4.0.2
       unist-util-stringify-position: 3.0.3
       unist-util-visit: 4.1.2
@@ -5530,7 +5538,7 @@ snapshots:
       - typescript
       - yup
 
-  '@tinacms/mdx@1.6.2(react@18.3.1)(typescript@5.6.2)(yup@1.6.1)':
+  '@tinacms/mdx@1.6.2(react@18.3.1)(typescript@5.8.3)(yup@1.6.1)':
     dependencies:
       '@tinacms/schema-tools': 1.7.3(react@18.3.1)(yup@1.6.1)
       acorn: 8.8.2
@@ -5556,7 +5564,7 @@ snapshots:
       remark-gfm: 2.0.0
       remark-mdx: 2.3.0
       stringify-entities: 4.0.3
-      typedoc: 0.26.11(typescript@5.6.2)
+      typedoc: 0.26.11(typescript@5.8.3)
       unist-util-source: 4.0.2
       unist-util-stringify-position: 3.0.3
       unist-util-visit: 4.1.2
@@ -5584,9 +5592,9 @@ snapshots:
       yup: 1.6.1
       zod: 3.24.2
 
-  '@tinacms/search@1.0.43(abstract-level@1.0.4)(react@18.3.1)(sucrase@3.35.0)(typescript@5.6.2)(yup@1.6.1)':
+  '@tinacms/search@1.0.43(abstract-level@1.0.4)(react@18.3.1)(sucrase@3.35.0)(typescript@5.8.3)(yup@1.6.1)':
     dependencies:
-      '@tinacms/graphql': 1.5.16(react@18.3.1)(typescript@5.6.2)
+      '@tinacms/graphql': 1.5.16(react@18.3.1)(typescript@5.8.3)
       '@tinacms/schema-tools': 1.7.3(react@18.3.1)(yup@1.6.1)
       memory-level: 1.0.0
       search-index: 4.0.0(abstract-level@1.0.4)
@@ -9635,7 +9643,7 @@ snapshots:
 
   throttle-debounce@3.0.1: {}
 
-  tinacms@2.7.5(@types/react@19.1.1)(abstract-level@1.0.4)(immer@10.1.1)(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(scheduler@0.26.0)(sucrase@3.35.0)(typescript@5.6.2):
+  tinacms@2.7.5(@types/react@19.1.1)(abstract-level@1.0.4)(immer@10.1.1)(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(scheduler@0.26.0)(sucrase@3.35.0)(typescript@5.8.3):
     dependencies:
       '@ariakit/react': 0.4.17(react-dom@19.1.0(react@18.3.1))(react@18.3.1)
       '@floating-ui/dom': 1.6.13
@@ -9653,9 +9661,9 @@ snapshots:
       '@radix-ui/react-toolbar': 1.1.3(@types/react@19.1.1)(react-dom@19.1.0(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-tooltip': 1.2.0(@types/react@19.1.1)(react-dom@19.1.0(react@18.3.1))(react@18.3.1)
       '@react-hook/window-size': 3.1.1(react@18.3.1)
-      '@tinacms/mdx': 1.6.2(react@18.3.1)(typescript@5.6.2)(yup@1.6.1)
+      '@tinacms/mdx': 1.6.2(react@18.3.1)(typescript@5.8.3)(yup@1.6.1)
       '@tinacms/schema-tools': 1.7.3(react@18.3.1)(yup@1.6.1)
-      '@tinacms/search': 1.0.43(abstract-level@1.0.4)(react@18.3.1)(sucrase@3.35.0)(typescript@5.6.2)(yup@1.6.1)
+      '@tinacms/search': 1.0.43(abstract-level@1.0.4)(react@18.3.1)(sucrase@3.35.0)(typescript@5.8.3)(yup@1.6.1)
       '@udecode/cn': 33.0.0(@types/react@19.1.1)(class-variance-authority@0.7.1)(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(tailwind-merge@2.6.0)
       '@udecode/plate': 36.5.9(@types/react@19.1.1)(immer@10.1.1)(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(scheduler@0.26.0)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.107.1(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(slate@0.103.0))(slate@0.103.0)
       '@udecode/plate-autoformat': 36.5.6(@udecode/plate-common@36.5.9(@types/react@19.1.1)(immer@10.1.1)(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(scheduler@0.26.0)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.107.1(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(slate@0.103.0))(slate@0.103.0))(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.107.1(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(slate@0.103.0))(slate@0.103.0)
@@ -9755,12 +9763,12 @@ snapshots:
 
   ts-easing@0.2.0: {}
 
-  ts-evaluator@1.2.0(typescript@5.6.2):
+  ts-evaluator@1.2.0(typescript@5.8.3):
     dependencies:
       ansi-colors: 4.1.3
       crosspath: 2.0.0
       object-path: 0.11.8
-      typescript: 5.6.2
+      typescript: 5.8.3
 
   ts-interface-checker@0.1.13: {}
 
@@ -9771,9 +9779,9 @@ snapshots:
 
   ts-pattern@5.0.8: {}
 
-  tsconfck@3.0.2(typescript@5.6.2):
+  tsconfck@3.0.2(typescript@5.8.3):
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.8.3
 
   tslib@2.6.2: {}
 
@@ -9785,16 +9793,18 @@ snapshots:
 
   type-fest@2.19.0: {}
 
-  typedoc@0.26.11(typescript@5.6.2):
+  typedoc@0.26.11(typescript@5.8.3):
     dependencies:
       lunr: 2.3.9
       markdown-it: 14.1.0
       minimatch: 9.0.5
       shiki: 1.29.2
-      typescript: 5.6.2
+      typescript: 5.8.3
       yaml: 2.7.1
 
   typescript@5.6.2: {}
+
+  typescript@5.8.3: {}
 
   uc.micro@2.1.0: {}
 
