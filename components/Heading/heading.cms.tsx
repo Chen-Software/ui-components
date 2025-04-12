@@ -11,6 +11,7 @@ export type HeadingProps = {
 
 export const Heading = ({ __typename, type, ...props }: HeadingProps) =>
 	h(Base, {
+		__typename,
 		as: {
 			h1: H1,
 			h2: H2,

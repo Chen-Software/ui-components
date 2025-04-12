@@ -62,7 +62,13 @@ export const Stack = ({
 
 	return (
 		<Base
-			as={({ style, ...p }) => (
+			as={({
+				style,
+				...p
+			}: {
+				style?: React.CSSProperties;
+				[key: string]: unknown;
+			}) => (
 				<StackBase
 					direction={direction}
 					aria-orientation={

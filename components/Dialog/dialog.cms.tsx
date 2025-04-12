@@ -3,7 +3,7 @@ import { Dialog as DialogBase } from ".";
 import { Button, type ButtonProps } from "../Button/button.cms";
 
 export type DialogProps = {
-	__typename: "PageBodyDialog";
+	__typename: string;
 	key?: string;
 	title?: string | null;
 	description?: string | null;

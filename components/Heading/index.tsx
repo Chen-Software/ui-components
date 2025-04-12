@@ -1,5 +1,12 @@
 import { createElement as h } from "react";
-import { Heading as HeadingBase, type HeadingProps } from "./heading";
+import {
+	Heading as HeadingBase,
+	type HeadingProps as HeadingBaseProps,
+} from "./heading";
+
+export interface HeadingProps extends HeadingBaseProps {
+	ariaLevel?: number;
+}
 
 export const Heading = ({ ariaLevel, ...props }: HeadingProps) => {
 	return h(

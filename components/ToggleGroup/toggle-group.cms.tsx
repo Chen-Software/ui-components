@@ -11,7 +11,7 @@ export type ToggleGroupItemProps = {
 	children?:
 		| ({
 				[key: string]: unknown;
-				__typename?: string | null;
+				__typename: string;
 				_template?: string | null;
 				content?: string | null;
 		  } | null)[]
@@ -31,14 +31,15 @@ export const ToggleGroup = ({
 	...props
 }: ToggleGroupProps) => {
 	const content = children?.map((item: ToggleGroupItemProps, i) => {
-		const { __typename } = item?.children?.[0] || { _template: "" };
+		const { __typename = "" } = item?.children?.[0] || { _template: "" };
 
 		const children =
 			[
 				"PageBodyToggleGroupChildrenToggleGroupItemChildrenText",
 				"PageBodyStackChildrenToggleGroupChildrenToggleGroupItemChildrenText",
-			].includes(__typename || "") &&
+			].includes(__typename) &&
 			h(Text, {
+				__typename: __typename,
 				key: `${key}-TglGrp-${i}-${item?.value}-text`,
 				content: item?.children?.[0]?.content || null,
 			});
@@ -54,7 +55,16 @@ export const ToggleGroup = ({
 		);
 	});
 	return h(Base, {
-		as: ({ children: c, defaultValue, ...props }) =>
+		__typename,
+		as: ({
+			children: c,
+			defaultValue,
+			...props
+		}: {
+			children?: React.ReactNode;
+			defaultValue?: string;
+			[key: string]: unknown;
+		}) =>
 			h(
 				ToggleGroupBase.Root,
 				{ defaultValue: [defaultValue], ...props },

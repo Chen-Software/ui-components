@@ -10,6 +10,16 @@ const defaultCloseButton = (
 	</Button>
 );
 
+export type DialogProps = DialogBase.RootProps & {
+	trigger?: React.ReactNode | null;
+	title?: React.ReactNode | string | null;
+	description?: React.ReactNode | string | null;
+	confirmButton?: React.ReactNode | null;
+	cancelButton?: React.ReactNode | null;
+	closeButton?: React.ReactNode | null;
+	context?: ((context: unknown) => React.ReactNode) | null;
+};
+
 export const Dialog = ({
 	trigger,
 	title,
@@ -20,7 +30,7 @@ export const Dialog = ({
 	context = undefined,
 	lazyMount = true,
 	...props
-}: DialogBase.RootProps) => {
+}: DialogProps) => {
 	return (
 		<DialogBase.Root {...props} lazyMount>
 			{trigger && <DialogBase.Trigger asChild>{trigger}</DialogBase.Trigger>}

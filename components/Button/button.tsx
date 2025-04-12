@@ -20,7 +20,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 		const trulyDisabled = loading || disabled;
 
 		return (
-			<StyledButton disabled={trulyDisabled} ref={ref} {...rest}>
+			<StyledButton
+				disabled={trulyDisabled}
+				// @ts-ignore
+				ref={ref}
+				{...rest}
+			>
 				{loading && !loadingText ? (
 					<>
 						<ButtonSpinner />

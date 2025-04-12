@@ -75,6 +75,7 @@ export const createStyleContext = <R extends Recipe>(recipe: R) => {
 			);
 		});
 
+		// @ts-ignore
 		StyledSlotProvider.displayName = Component.displayName || Component.name;
 
 		return StyledSlotProvider;
@@ -96,6 +97,7 @@ export const createStyleContext = <R extends Recipe>(recipe: R) => {
 			);
 		});
 
+		// @ts-ignore
 		StyledSlotComponent.displayName = Component.displayName || Component.name;
 
 		return StyledSlotComponent;
