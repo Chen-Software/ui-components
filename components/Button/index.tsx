@@ -10,7 +10,8 @@ export interface ButtonProps extends PropsWithChildren<BaseButtonProps> {
 	variant?: ConditionalValue<
 		"link" | "outline" | "solid" | "ghost" | "subtle"
 	> | null;
-	tooltip?: string;
+	tooltip?: string | null;
+	size?: ConditionalValue<"xs" | "sm" | "md" | "lg" | "xl" | "2xl"> | null;
 	children?: React.ReactNode | null;
 }
 
