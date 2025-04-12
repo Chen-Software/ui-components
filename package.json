@@ -8,7 +8,8 @@
 		"styles.css"
 	],
 	"scripts": {
-		"build": "panda && tsc --project tsconfig.json",
+		"build:cp-styles": "mv node_modules/design-system/styles.css ./styles.css",
+		"build": "panda && tsc --project tsconfig.json && npm run build:cp-styles",
 		"format": "npx @biomejs/biome format --write ./components"
 	},
 	"dependencies": {
