@@ -3,10 +3,10 @@ import React, { createElement as h } from "react";
 
 export const Breadcrumbs = ({ children, ...props }) => {
 	return (
-		// @ts-ignore
+		// @ts-expect-error
 		<Box as="nav" aria-label="breadcrumb" cursor="pointer">
 			<Flex
-				// @ts-ignore
+				// @ts-expect-error
 				as="ol"
 				listStyleType="none"
 				alignItems="center"
@@ -16,7 +16,7 @@ export const Breadcrumbs = ({ children, ...props }) => {
 				{...props}
 			>
 				<Box
-					// @ts-ignore
+					// @ts-expect-error
 					as="span"
 					marginRight={3}
 					marginBottom={1.5}
@@ -29,7 +29,7 @@ export const Breadcrumbs = ({ children, ...props }) => {
 					<>
 						{child}
 						{index !== React.Children.count(children) - 1 && (
-							// @ts-ignore
+							// @ts-expect-error
 							<Box as="span" marginX={3}>
 								{"➔"}
 							</Box>
