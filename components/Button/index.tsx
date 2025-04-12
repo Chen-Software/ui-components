@@ -1,3 +1,4 @@
+import type { ConditionalValue } from "@chen/design-system/types";
 import type { PropsWithChildren } from "react";
 import { Tooltip } from "../Tooltip";
 import {
@@ -6,6 +7,9 @@ import {
 } from "./button";
 
 export interface ButtonProps extends PropsWithChildren<BaseButtonProps> {
+	variant?: ConditionalValue<
+		"link" | "outline" | "solid" | "ghost" | "subtle"
+	> | null;
 	tooltip?: string;
 	children?: React.ReactNode | null;
 }
