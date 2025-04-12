@@ -1,6 +1,7 @@
 // import { ToggleGroup } from "../../ToggleGroup";
 // import React from "react";
-import { type TinaField, wrapFieldsWithMeta } from "tinacms";
+import type { TinaField } from "tinacms";
+// import { type TinaField, wrapFieldsWithMeta } from "tinacms";
 // import { injectStyles } from "../styles/base.advancedConfigs.textEffects.field";
 
 export const textEfects: TinaField = {
