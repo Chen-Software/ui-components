@@ -11,6 +11,7 @@ export type TextProps = {
 
 export const Text = ({ __typename, type, ...props }: TextProps) => {
 	return h(Base, {
+		__typename,
 		as: ({ ...p }) =>
 			h(TextBase, {
 				...(type && {
