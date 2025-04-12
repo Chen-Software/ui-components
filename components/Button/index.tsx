@@ -13,7 +13,6 @@ export const Button = ({ tooltip, children, ...props }: ButtonProps) => {
 	if (tooltip) {
 		return (
 			<Tooltip
-				// @ts-expect-error
 				trigger={<ButtonBase {...props}>{children}</ButtonBase>}
 				content={tooltip}
 			/>
