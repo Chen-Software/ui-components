@@ -4,6 +4,15 @@ import { Drawer as DrawerBase } from "./drawer";
 const defaultCloseTrigger = <Button variant="ghost">✖️</Button>;
 const defaultCancelButton = <Button variant="outline">Cancel</Button>;
 
+export type DrawerProps = DrawerBase.RootProps & {
+	trigger?: React.ReactNode | null;
+	title?: string | React.ReactNode | null;
+	description?: string | React.ReactNode | null;
+	content?: string | React.ReactNode | null;
+	footer?: boolean | React.ReactNode | null;
+	footerCancelButton?: React.ReactNode | null;
+	closeTrigger?: React.ReactNode | null;
+};
 export const Drawer = ({
 	trigger,
 	title,
@@ -13,7 +22,7 @@ export const Drawer = ({
 	footerCancelButton = defaultCancelButton,
 	closeTrigger = defaultCloseTrigger,
 	...props
-}: DrawerBase.RootProps) => {
+}: DrawerProps) => {
 	return (
 		<DrawerBase.Root {...props}>
 			<DrawerBase.Trigger asChild>{trigger}</DrawerBase.Trigger>
