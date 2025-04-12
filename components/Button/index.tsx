@@ -1,8 +1,8 @@
 import type { PropsWithChildren } from "react";
 import { Tooltip } from "../Tooltip";
 import {
-	Button as ButtonBase,
 	type ButtonProps as BaseButtonProps,
+	Button as ButtonBase,
 } from "./button";
 
 interface ButtonProps extends PropsWithChildren<BaseButtonProps> {
@@ -13,6 +13,7 @@ export const Button = ({ tooltip, children, ...props }: ButtonProps) => {
 	if (tooltip) {
 		return (
 			<Tooltip
+				// @ts-expect-error
 				trigger={<ButtonBase {...props}>{children}</ButtonBase>}
 				content={tooltip}
 			/>
