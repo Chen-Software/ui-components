@@ -10,6 +10,7 @@ export type ParagraphProps = {
 
 export const Paragraph = ({ __typename, ...props }: ParagraphProps) => {
 	return h(Base, {
+		__typename,
 		as: ParagraphBase,
 		...props,
 	});
