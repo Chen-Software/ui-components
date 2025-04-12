@@ -39,6 +39,7 @@ export const ToggleGroup = ({
 				"PageBodyStackChildrenToggleGroupChildrenToggleGroupItemChildrenText",
 			].includes(__typename || "") &&
 			h(Text, {
+				__typename,
 				key: `${key}-TglGrp-${i}-${item?.value}-text`,
 				content: item?.children?.[0]?.content || null,
 			});
@@ -54,6 +55,7 @@ export const ToggleGroup = ({
 		);
 	});
 	return h(Base, {
+		__typename,
 		as: ({ children: c, defaultValue, ...props }) =>
 			h(
 				ToggleGroupBase.Root,
