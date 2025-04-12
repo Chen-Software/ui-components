@@ -56,7 +56,15 @@ export const ToggleGroup = ({
 	});
 	return h(Base, {
 		__typename,
-		as: ({ children: c, defaultValue, ...props }) =>
+		as: ({
+			children: c,
+			defaultValue,
+			...props
+		}: {
+			children?: React.ReactNode;
+			defaultValue?: string;
+			[key: string]: unknown;
+		}) =>
 			h(
 				ToggleGroupBase.Root,
 				{ defaultValue: [defaultValue], ...props },
