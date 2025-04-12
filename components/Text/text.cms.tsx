@@ -3,7 +3,7 @@ import { Text as TextBase } from ".";
 import { Base, type BaseProps } from "../Base/base.cms";
 
 export type TextProps = {
-	__typename?: string | null;
+	__typename: string;
 	key?: string;
 	type?: string | null;
 	content?: string | null;

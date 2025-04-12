@@ -11,7 +11,7 @@ export type ToggleGroupItemProps = {
 	children?:
 		| ({
 				[key: string]: unknown;
-				__typename?: string | null;
+				__typename: string;
 				_template?: string | null;
 				content?: string | null;
 		  } | null)[]
@@ -19,7 +19,7 @@ export type ToggleGroupItemProps = {
 };
 
 export type ToggleGroupProps = {
-	__typename?: string | null;
+	__typename: string;
 	key?: string;
 	children?: (ToggleGroupItemProps | null)[] | null;
 };
