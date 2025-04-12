@@ -1,4 +1,3 @@
-import type { UseDialogContext } from "@ark-ui/react";
 import { Stack } from "@chen/design-system/jsx";
 import { Button } from "../Button";
 import { Dialog as DialogBase } from "./dialog";
@@ -18,7 +17,7 @@ export type DialogProps = DialogBase.RootProps & {
 	confirmButton?: React.ReactNode | null;
 	cancelButton?: React.ReactNode | null;
 	closeButton?: React.ReactNode | null;
-	context?: (context: UseDialogContext) => React.ReactNode | null;
+	context?: ((context: unknown) => React.ReactNode) | null;
 };
 
 export const Dialog = ({
